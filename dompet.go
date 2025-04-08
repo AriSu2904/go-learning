@@ -1,4 +1,4 @@
-package main
+package dompet
 
 type Wallet struct {
 	owner   string
