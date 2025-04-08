@@ -1,9 +1,18 @@
 package main
 
-import (
-	"intro/wallet"
-)
+type Wallet struct {
+	owner   string
+	balance int
+}
 
-func main() {
-	wallet.GetInfo()
+func RegisterWallet(username string) Wallet {
+	return Wallet{owner: username, balance: 0}
+}
+
+func (wallet *Wallet) GetInfo() int {
+	return wallet.balance
+}
+
+func (wallet *Wallet) Deposit(amount int) {
+	wallet.balance = amount
 }
