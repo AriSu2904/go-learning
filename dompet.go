@@ -1,18 +1,18 @@
 package dompet
 
 type Wallet struct {
-	owner   string
-	balance int
+	Owner   string
+	Balance int
 }
 
 func RegisterWallet(username string) Wallet {
-	return Wallet{owner: username, balance: 0}
+	return Wallet{Owner: username, Balance: 0}
 }
 
 func (wallet *Wallet) GetInfo() int {
-	return wallet.balance
+	return wallet.Balance
 }
 
 func (wallet *Wallet) Deposit(amount int) {
-	wallet.balance = amount
+	wallet.Balance = amount
 }
